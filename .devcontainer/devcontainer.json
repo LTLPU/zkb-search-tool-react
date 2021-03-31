@@ -1,0 +1,28 @@
+{
+	"name": "zkb-search-tool-react-dev",
+
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 10, 12, 14
+		"args": { "VARIANT": "14.16.0-buster" }
+	},
+
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+
+	"postCreateCommand": "yarn install",
+
+	"portsAttributes": {
+		"3000": {
+			"label": "zkb-search-tool-react",
+			"onAutoForward": "notify"
+		}
+	},
+
+	"remoteUser": "node"
+}

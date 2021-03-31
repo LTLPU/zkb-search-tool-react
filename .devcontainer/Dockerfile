@@ -1,0 +1,2 @@
+ARG VARIANT="14.16.0-buster"
+FROM node:${VARIANT}
